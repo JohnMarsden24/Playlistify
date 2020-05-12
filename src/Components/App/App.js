@@ -5,6 +5,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 import MusicPlayer from '../MusicPlayer/MusicPlayer'
+import SignInButton from '../SignInButton/SignInButton';
 import Spotify from '../../util/Spotify.js';
 
 class App extends React.Component {
@@ -22,6 +23,26 @@ class App extends React.Component {
     this.savePlaylist = this.savePlaylist.bind(this);
     this.search = this.search.bind(this);
     this.setTrack = this.setTrack.bind(this);
+    this.login = this.login.bind(this);
+  };
+
+  componentDidMount() {
+    this.setState({token: this.accessToken()})
+  };
+
+  login() {
+    Spotify.getAccessToken();
+  };
+
+  accessToken() {
+    let accessToken;
+    if (window.location.href !== 'http://localhost:3000/') {
+      const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
+      accessToken = accessTokenMatch[1];
+      return accessToken;
+    } else {
+      return accessToken;
+    }
   };
 
   addTrack(track) {
@@ -48,28 +69,33 @@ class App extends React.Component {
     this.setState({src: track});
   };
 
-  componentDidMount() {
-    window.addEventListener('load', Spotify.search(''));
-  }
+  async search(term) {
+    const results = await Spotify.search(term, this.state.token);
+    this.setState({searchResults: results});
+  };
 
   async savePlaylist() {
     const trackUris = this.state.playlistTracks.map(track => track.uri)
-    await Spotify.savePlaylist(this.state.playlistName, trackUris);
+    await Spotify.savePlaylist(this.state.playlistName, trackUris, this.state.token);
     this.setState({playlistName: 'New Playlist'});
     this.setState({playlistTracks: []});
   };
 
-  async search(term) {
-    const results = await Spotify.search(term);
-    this.setState({searchResults: results});
-  };
-
   render() {
+
+    let button;
+
+    if (this.state.token) {
+      button = <SearchBar onSearch={this.search} />
+    } else {
+      button = <SignInButton login={this.login} />
+    }
+
     return (
       <div>
         <h1><span className="highlight">play</span>listify</h1>
         <div className="App">
-          <SearchBar onSearch={this.search} />
+          {button}
           <MusicPlayer src={this.state.src} />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} setTrack={this.setTrack} />
