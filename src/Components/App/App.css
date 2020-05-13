@@ -22,34 +22,6 @@
   display: flex;
 }
 
-.tracklist {
-  box-sizing: border-box;
-  align-self: start;
-  width: 400px;
-  max-height: calc(100vh - 120px);
-  overflow: scroll;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #323232;
-  min-height: 200px;
-  transition: height 2s ease;
-}
-
-.tracklist h2 {
-  font-size: 24px;
-  margin: 0 0 10px;
-}
-
-.ml30-0 {
-  margin-left: 30px;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media(max-width: 992px) {
 
   .text-container {
@@ -58,14 +30,5 @@
 
   .search-page-container, .tracklist-container {
     flex-direction: column;
-  }
-
-  .tracklist {
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .ml30-0 {
-    margin-left: 0;
   }
 }

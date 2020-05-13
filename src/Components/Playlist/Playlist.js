@@ -22,7 +22,7 @@ class Playlist extends React.Component {
 
   render() {
     return(
-      <div className="tracklist ml30-0">
+      <div className="tracklist">
         <input defaultValue={"New Playlist"} onChange={this.handleNameChange} />
         <Tracklist tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true} />
         <div className="save-button">

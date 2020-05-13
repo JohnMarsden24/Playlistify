@@ -3,10 +3,12 @@
   max-height: 0;
   opacity: 0;
   border: none;
+  margin: 0;
   transition: all .5s ease;
 }
 
 .show {
   max-height: 80px;
   opacity: 1;
+  margin: 20px 0;
 }
