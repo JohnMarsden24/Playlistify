@@ -25,9 +25,9 @@ class App extends React.Component {
     this.login = this.login.bind(this);
   };
 
-  componentDidMount() {
-    this.setState({token: this.accessToken()})
-  };
+  // componentDidMount() {
+  //   this.setState({token: this.accessToken()})
+  // };
 
   login() {
     Spotify.getAccessToken();
