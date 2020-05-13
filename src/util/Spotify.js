@@ -1,6 +1,6 @@
 let accessToken;
 const clientId = process.env.REACT_APP_CLIENT_ID;
-const redirectUri = 'www.playlistify2.herokuapp.com/';
+const redirectUri = 'http://playlistify2.herokuapp.com/';
 
 const Spotify = {
 
