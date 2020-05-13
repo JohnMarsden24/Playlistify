@@ -1,0 +1,22 @@
+.button {
+  padding: 15px 30px;
+  background-color: #0A2342;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  opacity: .8;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media(max-width: 992px) {
+
+  .button {
+    opacity: 1;
+  }
+}

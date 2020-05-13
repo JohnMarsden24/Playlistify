@@ -75,7 +75,9 @@ const Spotify = {
       }
     );
     const newPlaylistResponseJson = await newPlaylistResponse.json();
-    const newPlaylistId = newPlaylistResponseJson.id
+    // const newPlaylistId = newPlaylistResponseJson.id;
+    return newPlaylistResponseJson.snapshot_id
+    // return newPlaylistId;
   }
 };
 

@@ -1,52 +1,71 @@
-body,
-html,
-#root {
-  height: 100%;
+.page-container {
+  position: absolute;
+  z-index: 0;
+  background-color: #384F68;
+  width: 100%;
+  color: #323232;
+  font-family: 'Jost', sans-serif;
 }
 
-html {
-  font-size: 18px;
+.text-container {
+  position: relative;
+  z-index: 5;
+  padding: 80px 80px 40px;
 }
 
-h1 {
-  padding: .77rem 0;
-  background-color: #010c3f;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.88rem;
-  color: #fff;
-}
-
-h1 .highlight {
-  color: #6c41ec;
-}
-
-h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.55rem;
-}
-
-.App {
-  height: 100%;
-  padding: 0 17% 10% 17%;
-  background-image: url('./background_photo_desktop.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 500;
-  color: #fff;
-}
-
-.App-playlist {
+.search-page-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
-@media only screen and (max-width: 1020px) {
-  .App-playlist {
-    align-items: center;
+.tracklist-container {
+  display: flex;
+}
+
+.tracklist {
+  box-sizing: border-box;
+  align-self: start;
+  width: 400px;
+  max-height: calc(100vh - 120px);
+  overflow: scroll;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #323232;
+  min-height: 200px;
+  transition: height 2s ease;
+}
+
+.tracklist h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.ml30-0 {
+  margin-left: 30px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media(max-width: 992px) {
+
+  .text-container {
+    padding: 80px 40px 40px
+  }
+
+  .search-page-container, .tracklist-container {
     flex-direction: column;
+  }
+
+  .tracklist {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .ml30-0 {
+    margin-left: 0;
   }
 }

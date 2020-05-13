@@ -1,0 +1,19 @@
+.background-logo {
+  position:absolute;
+  z-index: 1;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./background.svg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+@media(max-width: 992px) {
+
+  .background-logo {
+    background-position: 60% 0;
+  }
+}
