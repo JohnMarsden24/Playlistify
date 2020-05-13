@@ -91,7 +91,7 @@ class App extends React.Component {
     if (this.state.token) {
       view =
         <div className="search-page-container">
-          <div>
+          <div className="search-container">
             <h1 className="title">play<span className="highlight">listify.</span></h1>
             <SearchBar onSearch={this.search} />
           </div>
