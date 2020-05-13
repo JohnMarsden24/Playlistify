@@ -1,0 +1,41 @@
+.tracklist {
+  box-sizing: border-box;
+  align-self: start;
+  width: 400px;
+  max-height: calc(100vh - 120px);
+  overflow: scroll;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #323232;
+  min-height: 200px;
+  transition: height 2s ease;
+  margin-left: 60px;
+}
+
+.tracklist h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.tracklist input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #323232;
+  font-size: 24px;
+  height: 34px;
+  margin: 0 0 10px;
+  color: #323232;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+}
+
+@media(max-width: 992px) {
+
+  .tracklist {
+    width: 100%;
+    margin: 40px 0;
+  }
+}

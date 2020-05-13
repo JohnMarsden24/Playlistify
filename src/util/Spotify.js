@@ -1,6 +1,6 @@
 let accessToken;
 const clientId = process.env.REACT_APP_CLIENT_ID;
-const redirectUri = 'www.playlistify2.herokuapp.com/';
+const redirectUri = window.location.href;
 
 const Spotify = {
 
@@ -24,7 +24,6 @@ const Spotify = {
   },
 
   async search(term, accessToken) {
-    // const accessToken = Spotify.getAccessToken();
     const response = await fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,
       {
       headers: {Authorization: `Bearer ${accessToken}`}
@@ -49,7 +48,6 @@ const Spotify = {
     if (!name || !trackUris) {
       return
     };
-    // const accessToken = Spotify.getAccessToken();
     const headers = { Authorization: `Bearer ${accessToken}`};
     let userId;
     const response = await fetch(`https://api.spotify.com/v1/me`,
@@ -75,9 +73,7 @@ const Spotify = {
       }
     );
     const newPlaylistResponseJson = await newPlaylistResponse.json();
-    // const newPlaylistId = newPlaylistResponseJson.id;
     return newPlaylistResponseJson.snapshot_id
-    // return newPlaylistId;
   }
 };
 

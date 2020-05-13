@@ -1,12 +1,11 @@
 import React from 'react';
-import './SearchResults.css';
 
 import Tracklist from '../Tracklist/Tracklist'
 
 class SearchResults extends React.Component {
   render() {
 
-    let content = "mee"
+    let content = ""
     if (this.props.searchResults.length > 0) {
       content = <Tracklist
                   tracks={this.props.searchResults}
