@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2560px" height="1600px" viewBox="0 0 2560 1600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Desktop</title>
+    <defs>
+        <linearGradient x1="50%" y1="1.47012247%" x2="50%" y2="99.560506%" id="linearGradient-1">
+            <stop stop-color="#F46197" offset="0%"></stop>
+            <stop stop-color="#D04E79" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="2.3938978%" x2="50%" y2="98.0178421%" id="linearGradient-2">
+            <stop stop-color="#2CA58D" offset="0%"></stop>
+            <stop stop-color="#1A6D55" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="3.03576608e-15%" x2="50%" y2="72.8123129%" id="linearGradient-3">
+            <stop stop-color="#0A2342" offset="0%"></stop>
+            <stop stop-color="#384F68" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="2560" height="1595"></rect>
+        <path d="M0,1423.62131 C507.138027,1471.2071 949.655127,1336 1327.5513,1018 C1705.44747,700 2116.26371,562.666667 2560,606 L2560,1595.5 L0,1595 L0,1423.62131 Z" id="Path-2" fill="url(#linearGradient-1)"></path>
+        <path d="M0,1166.16078 C585.880706,1302.21543 1027.37774,1302.21543 1324.49109,1166.16078 C1621.60445,1030.10613 2033.44075,971.541382 2560,990.466527 L2560,1595.5 L0,1595.5 L0,1166.16078 Z" id="Path" fill="url(#linearGradient-2)"></path>
+        <path d="M0,1595.4995 C777.378975,1555.63248 1294.44563,1469.30991 1551.19996,1336.53179 C1807.95429,1203.75368 2144.22097,1177.12773 2560,1256.65396 L2560,1595.4995 L0,1595.4995 Z" id="Path-3" fill="url(#linearGradient-3)"></path>
+    </g>
+</svg>

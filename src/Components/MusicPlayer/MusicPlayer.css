@@ -1,0 +1,12 @@
+.music-player {
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  border: none;
+  transition: all .5s ease;
+}
+
+.show {
+  max-height: 80px;
+  opacity: 1;
+}

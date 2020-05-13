@@ -1,12 +1,19 @@
 import React from 'react';
+import './MusicPlayer.css';
 
 class MusicPlayer extends React.Component {
 
+  srcPresent() {
+    return (this.props.src) ? `https://open.spotify.com/embed/track/${this.props.src}` : ""
+  }
+
   render() {
     return (
-      <div>
-        <iframe src={`https://open.spotify.com/embed/track/${this.props.src}`} width="100%" height="80" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+      <iframe
+      src={this.srcPresent()}
+      className={`music-player ${this.props.visible}`}
+      allowtransparency="true"
+      allow="encrypted-media" />
     )
   }
 }
