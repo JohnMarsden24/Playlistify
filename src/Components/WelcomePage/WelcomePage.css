@@ -23,6 +23,10 @@
   margin-bottom: 40px;
 }
 
+.small-text-container p {
+  line-height: 30px;
+}
+
 .hero-img {
   width: 500px;
 }
