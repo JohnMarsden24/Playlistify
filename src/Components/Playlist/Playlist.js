@@ -3,6 +3,7 @@ import './Playlist.css';
 
 import Tracklist from '../Tracklist/Tracklist';
 import Button from '../Button/Button';
+import Tick from './tick.svg'
 
 class Playlist extends React.Component {
   constructor(props) {
@@ -14,20 +15,25 @@ class Playlist extends React.Component {
     this.props.onNameChange(event.target.value);
   };
 
-  buttonTextChange() {
+  playlistSaveSuccess() {
     if (this.props.playlistSaved) {
-      return <p>Playlist saved</p>
+      this.refs.input.value = '';
+      return <div className="playlist-saved">
+        <p>Playlist saved</p>
+        <img src={Tick} alt=""/>
+      </div>
     }
   }
 
   render() {
     return(
-      <div className="tracklist">
-        <input defaultValue={"New Playlist"} onChange={this.handleNameChange} />
-        <Tracklist tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true} />
+      <div className="tracklist-container">
+        <input placeholder="Enter new playlist name" onChange={this.handleNameChange} ref="input" />
+        <Tracklist className="tracklist-playlist" tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true} />
         <div className="save-button">
           <Button buttonMethod={this.props.onSave} text="Save to Spotify" />
-          {this.buttonTextChange()}
+          {this.playlistSaveSuccess()}
+
         </div>
       </div>
     )

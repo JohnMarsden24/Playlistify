@@ -1,6 +1,6 @@
 .track-card {
   border-bottom: 1px solid #323232;
-  padding-top: 10px;
+  padding-top: 23px;
 }
 
 .track-details {
@@ -43,7 +43,8 @@
   opacity: .8;
   transition: all .3s ease;
   cursor: pointer;
-  margin-right: 20px
+  margin-right: 20px;
+  margin-left: 5px;
 }
 
 .img-straight:hover {
