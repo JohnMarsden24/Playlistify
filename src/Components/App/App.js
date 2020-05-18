@@ -95,7 +95,7 @@ class App extends React.Component {
             <h1 className="title">play<span className="highlight">listify.</span></h1>
             <SearchBar onSearch={this.search} />
           </div>
-          <div className="tracklist-container">
+          <div className="tracklists-container">
             <SearchResults
               searchResults={this.state.searchResults}
               onAdd={this.addTrack}

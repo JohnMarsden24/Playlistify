@@ -13,7 +13,7 @@ class WelcomePage extends React.Component {
           <div className="small-text-container">
             <p>
               <span className="intro-text">
-              Search for songs from Spotify, create new playlists and then upload them to your account.
+              Search for songs from Spotify, create new playlists and then save them to your account.
               </span>
               <br/>
               <br/>
