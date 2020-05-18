@@ -16,7 +16,7 @@
 
 .tracklist-container h2 {
   font-size: 24px;
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 .tracklist-container input {
@@ -26,7 +26,7 @@
   background: transparent;
   font-size: 24px;
   height: 34px;
-  margin: 0 0 10px;
+  margin: 0;
   color: #323232;
   font-family: 'Jost', sans-serif;
   font-weight: 700;
