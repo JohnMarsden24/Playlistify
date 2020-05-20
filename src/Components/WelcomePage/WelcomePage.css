@@ -30,6 +30,7 @@
 
 .hero-img {
   width: 500px;
+  height: 100%;
 }
 
 @media(max-width: 992px) {
